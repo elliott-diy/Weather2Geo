@@ -101,6 +101,7 @@ def run(
                 latitude = float(row[4].strip())
                 longitude = float(row[5].strip())
                 timezone_str = row[17].strip()
+                country = row[8].strip()
 
                 tz = pytz.timezone(timezone_str)
                 target_hour = input_dt.hour
@@ -111,6 +112,7 @@ def run(
                         'latitude': latitude,
                         'longitude': longitude,
                         'timezone': timezone_str,
+                        'country': country,
                     })
             except Exception:
                 continue
@@ -136,8 +138,8 @@ def run(
     for i, cluster in enumerate(clusters, start=1):
         console.print(f"\n[bold magenta]Cluster {i}[/bold magenta] — [cyan]{len(cluster)}[/cyan] locations:")
         for loc in cluster:
-            console.print(f"[dim]-[/dim] [bold]{loc['location']}[/bold] — [yellow]{loc['temp']}°C[/yellow], [green]{loc['cap']}[/green]")
-
+            console.print(
+                f"[dim]-[/dim] [bold]{loc['country']} {loc['location']}[/bold] — [yellow]{loc['temp']}°C[/yellow], [green]{loc['cap']}[/green], [blue]lat: {loc['latitude']}, lon: {loc['longitude']}[/blue]")
 
 if __name__ == "__main__":
     console.print("[bold blue]OSINT-style Weather Matcher[/bold blue]")
