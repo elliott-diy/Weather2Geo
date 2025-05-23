@@ -96,7 +96,7 @@ Cluster 1 – 10 locations:
 
 ## Disclaimer
 
-This tool is for ethical, educational OSINT use only. Don’t be a creep — respect privacy and legal boundaries.
+This tool is for ethical, educational OSINT use only. Don’t be a creep, respect privacy and legal boundaries.
 
 
 
