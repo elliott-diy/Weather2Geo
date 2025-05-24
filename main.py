@@ -18,6 +18,7 @@ API_KEY = "UhJ4G66OjyLbn9mXARgajXLiLw6V75sHnfpU60aJBB"
 WEATHER_API_URL = "https://api.msn.com/weather/overview"
 
 
+# Haversine formula to calculate distance between two points on the Earth. May have to improve this in the future.
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371
     dlat = radians(lat2 - lat1)
@@ -26,6 +27,7 @@ def haversine(lat1, lon1, lat2, lon2):
     return R * 2 * atan2(sqrt(a), sqrt(1-a))
 
 
+# Clusters locations based on a maximum distance in kilometers.
 def cluster_locations(locations, max_distance_km=10):
     clusters = []
     for loc in locations:
@@ -119,10 +121,13 @@ def run(
 
     console.print(Panel.fit(f"[bold]Checking {len(locations)} candidate locations...[/bold]", style="blue"))
 
+    # Some locations may take a long time to process, especially if there are many candidates leading to many API calls.
     if len(locations) > 2000:
         console.print("[yellow]Warning: More than 2000 locations found. This may take a while and will use a lot of API calls.[/yellow]")
         input("Press Enter to continue or Ctrl+C to cancel...")
 
+
+    #TODO: Implement a rate limit to avoid hitting the API too hard as well as changing this to use Asyncio for better performance.
     matches = []
     with ThreadPoolExecutor(max_workers=50) as executor:
         futures = [executor.submit(fetch_weather, loc, desired_cap, desired_temp, tolerance) for loc in locations]
