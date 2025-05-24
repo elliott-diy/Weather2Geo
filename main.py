@@ -13,6 +13,7 @@ from rich.panel import Panel
 app = typer.Typer()
 console = Console()
 
+# The key displayed below is a public api key granted by microsoft, it is not a secret nor private key.
 API_KEY = "UhJ4G66OjyLbn9mXARgajXLiLw6V75sHnfpU60aJBB"
 WEATHER_API_URL = "https://api.msn.com/weather/overview"
 
@@ -81,7 +82,6 @@ def run(
     cluster_distance: int = typer.Option(15, help="Clustering distance in KM (default: 25)"),
     cities_file: str = typer.Option("cities15000.txt", help="Path to cities data file")
 ):
-    # Restore original behavior: assume user input is in local system time
     input_dt = datetime.strptime(time, "%Y-%m-%d %H:%M")
 
     desired_cap = condition.strip().lower()
