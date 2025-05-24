@@ -8,10 +8,6 @@
 
 People post screenshots with the Windows weather widget in their taskbar all the time, showing the exact temperature, weather condition, and local time. This tool uses the same API as the widget to find cities where those conditions are currently true.
 
-It’s built for one job:
-
-> Find out roughly where someone is based on a single corner of their screen.
-
 
 > ⚠️ This tool works best if used shortly after the screenshot is posted — conditions change fast.
 
