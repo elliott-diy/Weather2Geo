@@ -19,6 +19,7 @@ WEATHER_API_URL = "https://api.msn.com/weather/overview"
 
 
 # Haversine formula to calculate distance between two points on the Earth. May have to improve this in the future.
+# Possible improvement is to use https://github.com/mapado/haversine for better code.
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371
     dlat = radians(lat2 - lat1)
