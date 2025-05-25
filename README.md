@@ -1,4 +1,6 @@
+Here’s your updated full `README.md`-style documentation for **Weather2Geo**, with the requested formatting: multi-line GitHub setup commands and **one-line Python usage examples** only.
 
+---
 
 # Weather2Geo
 
@@ -8,17 +10,16 @@
 
 People post screenshots with the Windows weather widget in their taskbar all the time, showing the exact temperature, weather condition, and local time. This tool uses the same API as the widget to find cities where those conditions are currently true.
 
-
-> ⚠️ This tool works best if used shortly after the screenshot is posted — conditions change fast.
+> ⚠️ This tool works best if used shortly after the screenshot is posted. Conditions change fast.
 
 ---
 
 ## Features
 
-* 🌍 **Geolocation from Widgets**: Match weather condition, temp, and time to a list of real cities.
-* 🕒 **Timezone-Aware**: Localizes your input to each city’s timezone to compare properly.
-* 🗺️ **Clustering**: Groups nearby hits so you don’t get overwhelmed by noise.
-* 🧪 **Extensible**: Tweak tolerance, data sources, and distance for your use case.
+* **Geolocation from Widgets**: Match weather condition, temp, and time to a list of real cities
+* **Timezone-Aware**: Localizes your input to each city’s timezone for accurate comparison
+* **Clustering**: Groups nearby hits to reduce noise
+* **Extensible**: Tweak tolerance, data sources, and clustering distance
 
 ---
 
@@ -35,12 +36,10 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python main.py run \
-  --time "2025-05-22 14:00" \
-  --condition "Mostly cloudy" \
-  --temp 18 \
-  --tolerance 1.0
+python main.py run --time "2025-05-22 14:00" --condition "Mostly cloudy" --temp 18 --tolerance 1.0
 ```
+
+---
 
 ### Options
 
@@ -66,9 +65,10 @@ Mostly clear | 13°C | 10:09 PM | May 22
 Run:
 
 ```bash
-python main.py run --time "2025-05-22 22:09" --condition "Mostly clear" --temp 13```
+python main.py run --time "2025-05-22 22:09" --condition "Mostly clear" --temp 13
+```
 
-And you’ll get clusters of cities like:
+And you'll get clusters of cities like:
 
 ```
 Cluster 1 – 10 locations:
@@ -82,13 +82,11 @@ Cluster 1 – 10 locations:
 ## Data Sources
 
 * **City List**: [GeoNames `cities15000.txt`](https://download.geonames.org/export/dump/)
-* **Weather**: [MSN Weather API](https://www.msn.com/en-ca/weather) - same backend as the Windows widget
+* **Weather**: [MSN Weather API](https://www.msn.com/en-ca/weather) — same backend as the Windows widget
 
 ---
 
 ## Disclaimer
 
-This tool is for ethical, educational OSINT use only. Don’t be a creep, respect privacy and legal boundaries.
-
-
+This tool is for ethical, educational OSINT use only. Don’t be a creep. Respect privacy and legal boundaries.
 
