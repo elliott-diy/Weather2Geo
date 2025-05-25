@@ -1,6 +1,4 @@
-Here’s your updated full `README.md`-style documentation for **Weather2Geo**, with the requested formatting: multi-line GitHub setup commands and **one-line Python usage examples** only.
 
----
 
 # Weather2Geo
 
