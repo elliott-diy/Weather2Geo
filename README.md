@@ -66,11 +66,7 @@ Mostly clear | 13°C | 10:09 PM | May 22
 Run:
 
 ```bash
-python main.py run \
-  --time "2025-05-22 22:09" \
-  --condition "Mostly clear" \
-  --temp 13
-```
+python main.py run --time "2025-05-22 22:09" --condition "Mostly clear" --temp 13```
 
 And you’ll get clusters of cities like:
 
