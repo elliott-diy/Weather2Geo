@@ -82,6 +82,16 @@ Cluster 1 – 10 locations:
 
 ---
 
+## Contributing
+
+Found a bug? Want to improve matching accuracy or add new data sources? Pull requests are welcome!
+
+Feel free to:
+- Open an [issue](https://github.com/elliott-diy/Weather2Geo/issues) with suggestions or bugs
+- Submit a PR for improvements (accuracy, timezone logic, clustering, etc.)
+- Share how you’re using the tool - feedback helps guide future features
+
+---
 ## Disclaimer
 
 This tool is for ethical, educational OSINT use only. Don’t be a creep. Respect privacy and legal boundaries.
