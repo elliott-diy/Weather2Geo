@@ -1,7 +1,5 @@
-
-
 # Weather2Geo
-
+> If you find this project useful, please consider leaving a ⭐, it helps others discover the tool and supports continued development.
 ## Overview
 
 **Weather2Geo** is a focused OSINT tool that turns weather widget leaks into geolocation data.
